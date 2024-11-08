@@ -10,13 +10,13 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyALE4roNa983aGKzi5jAqBOdeRln4nlXWM",
-  authDomain: "school-hub-1972.firebaseapp.com",
-  projectId: "school-hub-1972",
-  storageBucket: "school-hub-1972.firebasestorage.app",
-  messagingSenderId: "603783622063",
-  appId: "1:603783622063:web:ee15d9acef0a3a14e7935a",
-  measurementId: "G-440RC0C04Q",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase

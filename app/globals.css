@@ -72,6 +72,12 @@
     --chart-5: 340 75% 55%;
   }
 }
+/* .recharts-bar-rectangle:hover {
+  fill: blue !important; 
+  stroke: #ff4500 !important;
+  stroke-width: 5;
+} */
+
 
 @layer base {
   * {

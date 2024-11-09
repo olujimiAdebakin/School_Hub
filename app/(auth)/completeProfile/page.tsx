@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { addDoc, collection } from "firebase/firestore";
 import { updateEmail, updatePassword } from "firebase/auth"; 
-import { auth, db } from "@/lib/firebase"; // Ensure that Firebase is correctly initialized
+import { auth, db } from "@/lib/firebase"; 
 
 const CompleteProfilePage: React.FC = () => {
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [schoolName, setSchoolName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>(""); // Avoid saving plain password
+  const [password, setPassword] = useState<string>(""); 
   const [role, setRole] = useState<string>("Student");
   const [loading, setLoading] = useState<boolean>(false);
   const router = useRouter();
@@ -103,7 +103,7 @@ const CompleteProfilePage: React.FC = () => {
               htmlFor="schoolName"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Name of School / University
+              Name of School
             </label>
             <input
               id="schoolName"
@@ -164,7 +164,8 @@ const CompleteProfilePage: React.FC = () => {
               required
             >
               <option value="Student">Student</option>
-              <option value="Lecturer">Lecturer</option>
+              <option value="Teacher">Teacher</option>
+              <option value="Admin">Admin</option>
             </select>
           </div>
 

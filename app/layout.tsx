@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+// import { UserProvider } from "./contexts/UserContext";
 
 // import Footer from "./ui/footer";
 // import Navbar from "./ui/navbar";
@@ -26,12 +27,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${ibmPlexSansBold} antialiased`}>
-        {/* <Navbar/> */}
-        {children}
-        {/* <Footer/> */}
-      </body>
-    </html>
+   
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${ibmPlexSansBold} antialiased`}
+        >
+          {/* <Navbar/> */}
+          {children}
+          {/* <Footer/> */}
+        </body>
+      </html>
+   
   );
 }

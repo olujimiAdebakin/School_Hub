@@ -1,5 +1,8 @@
 import AttendanceChart from '@/app/charts/AttendanceChart';
 import CountChart from '@/app/charts/CountChart';
+import Announcement from '@/app/ui/Announcement';
+import EventsCalendar from '@/app/ui/EventsCalendar';
+import FinanceCharts from '@/app/ui/FinanceCharts';
 import UserCard from '@/app/ui/UserCard';
 import React from 'react'
 
@@ -30,11 +33,16 @@ const Adminpage = () => {
         </div>
 
         {/* Bottom charts */}
-        <div></div>
+        <div className='w-full h-[500px]'>
+          <FinanceCharts/>
+        </div>
       </div>
 
       {/* right */}
-      <div className="w-full lg:1/3">r</div>
+      <div className="w-full lg:w-1/3 flex flex-col gap-8">
+        <EventsCalendar />
+        <Announcement/>
+      </div>
     </div>
   );
 }

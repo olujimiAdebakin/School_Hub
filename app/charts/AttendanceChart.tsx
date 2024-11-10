@@ -61,7 +61,7 @@ const AttendanceChart = () => {
       </div>
 
       {/* Bar Chart Container */}
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="90%">
         <BarChart data={data} barSize={20}>
           {/* Grid, Axes, Tooltip, and Legend */}
           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#ddd" />
@@ -69,9 +69,9 @@ const AttendanceChart = () => {
             dataKey="name"
             axisLine={false}
             tick={{ fill: "#d1d5db" }}
-            tick={false}
+            tickLine={false}
           />
-          <YAxis axisLine={false} tick={{ fill: "#d1d5db" }} tick={false} />
+          <YAxis axisLine={false} tick={{ fill: "#d1d5db" }} tickLine={false} />
           <Tooltip
             conntentStyle={{ borderRadius: "10px", borderColor: "lightgray" }}
           />

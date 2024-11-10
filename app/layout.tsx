@@ -13,7 +13,7 @@ const geistSans = localFont({
 });
 const ibmPlexSansBold = localFont({
   src: "./fonts/IBMPlexSans-Bold.ttf",
-  variable: "--font-ibmplex-bold",
+  variable: "--font-ibmPlex-bold",
   weight: " 900",
 });
 export const metadata: Metadata = {

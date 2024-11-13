@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -14,38 +14,82 @@ import {
 } from "recharts";
 
 const FinanceCharts = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<any[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Fetch the data from Alpha Vantage Api
     const fetchData = async () => {
-      const response = await fetch(
-        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=GOOGL&apikey=YOUR_API_KEY`
-      );
-      const result = await response.json();
+      setLoading(true);
+      setError(null); 
 
-      // Process the result into a format that Recharts can use
-      const timeSeries = result["Time Series (Daily)"];
-      const chartData = Object.keys(timeSeries)
-        .slice(0, 12)
-        .map((date) => ({
-          name: date,
-          Income: parseFloat(timeSeries[date]["4. close"]), 
-          Expense: parseFloat(timeSeries[date]["4. close"]) * 0.05, 
-        }));
+      try {
+        const response = await fetch(
+          `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=GOOGL&apikey=${process.env.NEXT_PUBLIC_ALPHA_VANTAGE_API_KEY}`
+        );
 
-      setData(chartData); 
+        if (!response.ok) {
+          throw new Error("Failed to fetch data from Alpha Vantage");
+        }
+
+        const result = await response.json();
+
+        
+        console.log("API Response:", result);
+
+        
+        const timeSeries = result["Time Series (Daily)"];
+        if (!timeSeries) {
+          throw new Error("Time series data is missing in the API response.");
+        }
+
+        
+        const chartData = Object.keys(timeSeries)
+          .slice(0, 5) 
+          .map((date) => ({
+            name: date,
+            Income: parseFloat(timeSeries[date]["4. close"]), 
+            Expense: parseFloat(timeSeries[date]["4. close"]) * 0.05, 
+          }));
+
+        setData(chartData);
+      } catch (err: any) {
+        setError(err.message); 
+        console.error("Error fetching or processing data:", err);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchData();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="bg-white rounded-lg p-4 h-full shadow-lg">
+        <div className="flex justify-center items-center h-full">
+          <span className="text-gray-600">Loading...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="bg-white rounded-lg p-4 h-full shadow-lg">
+        <div className="flex justify-center items-center h-full">
+          <span className="text-red-600">Error: {error}</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white rounded-lg p-4 h-full shadow-lg">
       {/* Title and Icon Section */}
       <div className="flex justify-between items-center space-x-2 mb-4">
         <h1 className="text-lg font-semibold text-gray-700">Earnings</h1>
-        <Image src="/finance.png" alt="More" width={20} height={20} />
+        <Image src="/finance.png" alt="Finance" width={20} height={20} />
       </div>
 
       {/* Finance chart container */}

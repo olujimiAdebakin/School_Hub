@@ -140,19 +140,19 @@ const menuItems = [
         icon: "/dashboard.png",
         label: "Dashboard",
         href: "/admin",
-        visible: ["admin", "teacher", "student", "parent"],
+        visible: ["admin", "teacher", "student", "parent", "finance", "subject", "attendance", "notice", "calendar", "library", "message", "result"],
       },
       {
         icon: "/teacher.png",
         label: "Teachers",
         href: "/teacher",
-        visible: ["admin", "teacher"],
+        visible: ["student", "attendance", "notice", "calendar", "library", "message", "result", "teacher"],
       },
       {
         icon: "/student.png",
         label: "Students",
         href: "/student",
-        visible: ["student", "teacher"],
+        visible: ["student", ],
       },
       {
         icon: "/parent.png",

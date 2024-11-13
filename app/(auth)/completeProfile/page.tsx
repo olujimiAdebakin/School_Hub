@@ -253,7 +253,7 @@ const CompleteProfilePage: React.FC = () => {
   const [password, setPassword] = useState<string>("");
   const [role, setRole] = useState<string>("Student");
   const [loading, setLoading] = useState<boolean>(false);
-  const [isFetching, setIsFetching] = useState<boolean>(true); // New state for fetching
+  const [isFetching, setIsFetching] = useState<boolean>(true); 
   const router = useRouter();
 
   // Fetch user profile from Firestore
@@ -305,6 +305,7 @@ const CompleteProfilePage: React.FC = () => {
           schoolName,
           email,
           role,
+          password,
         });
 
         // If email is changed, update in Firebase Authentication
@@ -455,6 +456,7 @@ const CompleteProfilePage: React.FC = () => {
               <option value="Student">Student</option>
               <option value="Teacher">Teacher</option>
               <option value="Admin">Admin</option>
+              <option value="Parent">Parent</option>
             </select>
           </div>
 

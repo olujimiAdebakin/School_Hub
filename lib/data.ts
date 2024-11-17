@@ -1,107 +1,5 @@
 
 
-// export const scheduledEvents = [
-//   // Class schedules
-//   {
-//     title: "Math Class - Algebra",
-//     start: new Date(2024, 9, 15, 9, 0),
-//     end: new Date(2024, 9, 15, 10, 30),
-//     resource: "Room 101",
-//   },
-//   {
-//     title: "History Class - World War II",
-//     start: new Date(2024, 9, 15, 11, 0),
-//     end: new Date(2024, 9, 15, 12, 30),
-//     resource: "Room 103",
-//   },
-
-//   // Exams
-//   {
-//     title: "Midterm Exam - Math",
-//     start: new Date(2024, 9, 16, 9, 0),
-//     end: new Date(2024, 9, 16, 12, 0),
-//     exam: true,
-//     description: "Midterm exam for Math students.",
-//   },
-//   {
-//     title: "Midterm Exam - History",
-//     start: new Date(2024, 9, 17, 9, 0),
-//     end: new Date(2024, 9, 17, 12, 0),
-//     exam: true,
-//     description: "Midterm exam for History students.",
-//   },
-
-//   // Parent-teacher meetings
-//   {
-//     title: "Parent-Teacher Meeting - Class A",
-//     start: new Date(2024, 9, 20, 15, 0),
-//     end: new Date(2024, 9, 20, 17, 0),
-//     location: "Room 201",
-//     description: "Meet with parents of Class A students.",
-//   },
-
-//   // Holidays
-//   {
-//     title: "School Holiday - National Day",
-//     start: new Date(2024, 9, 15),
-//     end: new Date(2024, 9, 15),
-//     holiday: true,
-//     description: "School closed for National Day.",
-//   },
-//   {
-//     title: "School Holiday - Winter Break",
-//     start: new Date(2024, 11, 20),
-//     end: new Date(2025, 0, 5),
-//     holiday: true,
-//     description: "Winter break for all students and staff.",
-//   },
-
-//   // Extracurricular activities
-//   {
-//     title: "Soccer Practice - U16 Boys",
-//     start: new Date(2024, 9, 16, 16, 30),
-//     end: new Date(2024, 9, 16, 18, 0),
-//     activity: "Sports",
-//     location: "Field A",
-//   },
-//   {
-//     title: "Music Club - Piano Practice",
-//     start: new Date(2024, 9, 17, 14, 0),
-//     end: new Date(2024, 9, 17, 16, 0),
-//     activity: "Music",
-//     location: "Room 105",
-//   },
-//   {
-//     title: "Art Club - Painting Class",
-//     start: new Date(2024, 9, 18, 13, 30),
-//     end: new Date(2024, 9, 18, 15, 30),
-//     activity: "Art",
-//     location: "Room 106",
-//   },
-//   {
-//     title: "School Play Rehearsal - Romeo & Juliet",
-//     start: new Date(2024, 9, 19, 10, 0),
-//     end: new Date(2024, 9, 19, 13, 0),
-//     activity: "Drama",
-//     location: "Auditorium",
-//   },
-
-//   // Special events
-//   {
-//     title: "Annual Sports Day",
-//     start: new Date(2024, 9, 22, 8, 0),
-//     end: new Date(2024, 9, 22, 15, 0),
-//     description: "Annual sports day for all grades.",
-//     location: "Sports Complex",
-//   },
-//   {
-//     title: "School Open Day",
-//     start: new Date(2024, 9, 23, 9, 0),
-//     end: new Date(2024, 9, 23, 12, 0),
-//     description: "Prospective students and parents visit the school.",
-//     location: "Main Hall",
-//   },
-// ];
 
 // Helper function to generate events dynamically for subjects
 export const generateEvent = (title: string, daysOffset: number, startHour: number, endHour: number) => {
@@ -120,7 +18,7 @@ export const generateEvent = (title: string, daysOffset: number, startHour: numb
     title,
     start,
     end,
-    resource: "Room 101", // Classroom or resource
+    resource: "Room 101", 
   };
 };
 
@@ -164,3 +62,1069 @@ export const scheduledEvents = [
   generateEvent("Fundraising Event", 27, 10, 13),  // In 27 days, 10 AM - 1 PM
 ];
 
+// TEMPORARY DATA
+
+export let role = "admin";
+
+export const teachersData = [
+  {
+    id: 1,
+    teacherId: "1234567890",
+    name: "Adeyemi Oladipo",
+    email: "adeyemi@oladipo.com",
+    photo:
+      "https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "1234567890",
+    subjects: ["Math", "Geometry"],
+    classes: ["1B", "2A", "3C"],
+    address: "123 Main St, Lagos, Nigeria",
+  },
+  {
+    id: 2,
+    teacherId: "1234567890",
+    name: "Funmi Adebayo",
+    email: "funmi@adebayo.com",
+    photo:
+      "https://images.pexels.com/photos/936126/pexels-photo-936126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "1234567890",
+    subjects: ["Physics", "Chemistry"],
+    classes: ["5A", "4B", "3C"],
+    address: "123 Main St, Lagos, Nigeria",
+  },
+  {
+    id: 3,
+    teacherId: "1234567890",
+    name: "Chijioke Okafor",
+    email: "chijioke@okafor.com",
+    photo:
+      "https://images.pexels.com/photos/428328/pexels-photo-428328.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "1234567890",
+    subjects: ["Biology"],
+    classes: ["5A", "4B", "3C"],
+    address: "123 Main St, Lagos, Nigeria",
+  },
+  {
+    id: 4,
+    teacherId: "1234567890",
+    name: "Bisi Akinwale",
+    email: "bisi@akinwale.com",
+    photo:
+      "https://images.pexels.com/photos/1187765/pexels-photo-1187765.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "1234567890",
+    subjects: ["History"],
+    classes: ["5A", "4B", "3C"],
+    address: "123 Main St, Lagos, Nigeria",
+  },
+  {
+    id: 5,
+    teacherId: "1234567890",
+    name: "Ngozi Nwachukwu",
+    email: "ngozi@nwachukwu.com",
+    photo:
+      "https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "1234567890",
+    subjects: ["Music", "History"],
+    classes: ["5A", "4B", "3C"],
+    address: "123 Main St, Lagos, Nigeria",
+  },
+  {
+    id: 6,
+    teacherId: "1234567890",
+    name: "Kunle Ojo",
+    email: "kunle@ojo.com",
+    photo:
+      "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "1234567890",
+    subjects: ["Physics"],
+    classes: ["5A", "4B", "3C"],
+    address: "123 Main St, Lagos, Nigeria",
+  },
+  {
+    id: 7,
+    teacherId: "1234567890",
+    name: "Bola Alabi",
+    email: "bola@alabi.com",
+    photo:
+      "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "1234567890",
+    subjects: ["English", "Yoruba"],
+    classes: ["5A", "4B", "3C"],
+    address: "123 Main St, Lagos, Nigeria",
+  },
+  {
+    id: 8,
+    teacherId: "1234567890",
+    name: "Amina Suleiman",
+    email: "amina@suleiman.com",
+    photo:
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "1234567890",
+    subjects: ["Math", "Geometry"],
+    classes: ["5A", "4B", "3C"],
+    address: "123 Main St, Lagos, Nigeria",
+  },
+  {
+    id: 9,
+    teacherId: "1234567890",
+    name: "Tunde Bakare",
+    email: "tunde@bakare.com",
+    photo:
+      "https://images.pexels.com/photos/842980/pexels-photo-842980.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "1234567890",
+    subjects: ["Literature", "English"],
+    classes: ["5A", "4B", "3C"],
+    address: "123 Main St, Lagos, Nigeria",
+  },
+  {
+    id: 10,
+    teacherId: "1234567890",
+    name: "Ifeoma Uche",
+    email: "ifeoma@uche.com",
+    photo:
+      "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "1234567890",
+    subjects: ["Biology"],
+    classes: ["5A", "4B", "3C"],
+    address: "123 Main St, Lagos, Nigeria",
+  },
+];
+
+export const studentsData = [
+  {
+    id: 1,
+    studentId: "1234567890",
+    name: "Chinwe Obiora",
+    email: "chinwe.obiora@gmail.com",
+    photo:
+      "https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "08012345678",
+    grade: 5,
+    class: "1B",
+    address: "123 Ogunlana St, Lagos, Nigeria",
+  },
+  {
+    id: 2,
+    studentId: "1234567890",
+    name: "Emeka Nnamdi",
+    email: "emeka.nnamdi@yahoo.com",
+    photo:
+      "https://images.pexels.com/photos/936126/pexels-photo-936126.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "08023456789",
+    grade: 5,
+    class: "5A",
+    address: "456 Ogbomosho Rd, Abuja, Nigeria",
+  },
+  {
+    id: 3,
+    studentId: "1234567890",
+    name: "Adesuwa Ighodaro",
+    email: "adesuwa.ighodaro@gmail.com",
+    photo:
+      "https://images.pexels.com/photos/428328/pexels-photo-428328.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "08034567890",
+    grade: 5,
+    class: "5A",
+    address: "789 Ikorodu St, Lagos, Nigeria",
+  },
+  {
+    id: 4,
+    studentId: "1234567890",
+    name: "Folake Adebanjo",
+    email: "folake.adebanjo@gmail.com",
+    photo:
+      "https://images.pexels.com/photos/1187765/pexels-photo-1187765.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "08045678901",
+    grade: 5,
+    class: "5A",
+    address: "234 Aba St, Enugu, Nigeria",
+  },
+  {
+    id: 5,
+    studentId: "1234567890",
+    name: "Ifeoma Okoro",
+    email: "ifeoma.okoro@gmail.com",
+    photo:
+      "https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "08056789012",
+    grade: 5,
+    class: "5A",
+    address: "567 Opebi Rd, Ikeja, Lagos, Nigeria",
+  },
+  {
+    id: 6,
+    studentId: "1234567890",
+    name: "Chidera Okafor",
+    email: "chidera.okafor@yahoo.com",
+    photo:
+      "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "08067890123",
+    grade: 5,
+    class: "5A",
+    address: "678 Garki St, Abuja, Nigeria",
+  },
+  {
+    id: 7,
+    studentId: "1234567890",
+    name: "Babatunde Alabi",
+    email: "babatunde.alabi@hotmail.com",
+    photo:
+      "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "08078901234",
+    grade: 5,
+    class: "5A",
+    address: "890 Surulere Ave, Lagos, Nigeria",
+  },
+  {
+    id: 8,
+    studentId: "1234567890",
+    name: "Olakunle Adeoye",
+    email: "olakunle.adeoye@gmail.com",
+    photo:
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "08089012345",
+    grade: 5,
+    class: "5A",
+    address: "901 Eleme Rd, Port Harcourt, Nigeria",
+  },
+  {
+    id: 9,
+    studentId: "1234567890",
+    name: "Titilayo Ogunleye",
+    email: "titilayo.ogunleye@gmail.com",
+    photo:
+      "https://images.pexels.com/photos/842980/pexels-photo-842980.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "08090123456",
+    grade: 5,
+    class: "5A",
+    address: "123 Aba Rd, Onitsha, Nigeria",
+  },
+  {
+    id: 10,
+    studentId: "1234567890",
+    name: "Tope Akinyemi",
+    email: "tope.akinyemi@yahoo.com",
+    photo:
+      "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    phone: "08001234567",
+    grade: 5,
+    class: "5A",
+    address: "456 Marina St, Lagos Island, Nigeria",
+  },
+];
+
+
+export const parentsData = [
+  {
+    id: 1,
+    name: "Adekunle Adebayo",
+    students: ["Chidera Okafor"],
+    email: "adekunle.adebayo@gmail.com",
+    phone: "08012345678",
+    address: "123 Ogunlana St, Lagos, Nigeria",
+  },
+  {
+    id: 2,
+    name: "Chioma Okeke",
+    students: ["Adesuwa Ighodaro"],
+    email: "chioma.okeke@yahoo.com",
+    phone: "08023456789",
+    address: "456 Ogbomosho Rd, Abuja, Nigeria",
+  },
+  {
+    id: 3,
+    name: "Tunde Alabi",
+    students: ["Tope Akinyemi"],
+    email: "tunde.alabi@hotmail.com",
+    phone: "08034567890",
+    address: "789 Ikorodu St, Lagos, Nigeria",
+  },
+  {
+    id: 4,
+    name: "Ngozi Nwosu",
+    students: ["Emeka Nnamdi", "Chinaza Eze"],
+    email: "ngozi.nwosu@gmail.com",
+    phone: "08045678901",
+    address: "234 Aba St, Enugu, Nigeria",
+  },
+  {
+    id: 5,
+    name: "Funke Balogun",
+    students: ["Titilayo Ogunleye"],
+    email: "funke.balogun@gmail.com",
+    phone: "08056789012",
+    address: "567 Opebi Rd, Ikeja, Lagos, Nigeria",
+  },
+  {
+    id: 6,
+    name: "Kunle Adebayo",
+    students: ["Chukwuemeka Obi"],
+    email: "kunle.adebayo@yahoo.com",
+    phone: "08067890123",
+    address: "678 Garki St, Abuja, Nigeria",
+  },
+  {
+    id: 7,
+    name: "Bola Akinfenwa",
+    students: ["Folake Adebanjo", "Babatunde Alabi"],
+    email: "bola.akinfenwa@hotmail.com",
+    phone: "08078901234",
+    address: "890 Surulere Ave, Lagos, Nigeria",
+  },
+  {
+    id: 8,
+    name: "Amara Obi",
+    students: ["Ifeoma Okoro"],
+    email: "amara.obi@gmail.com",
+    phone: "08089012345",
+    address: "901 Eleme Rd, Port Harcourt, Nigeria",
+  },
+  {
+    id: 9,
+    name: "Ifeanyi Okonkwo",
+    students: ["Chinwe Obiora", "Obinna Eze"],
+    email: "ifeanyi.okonkwo@gmail.com",
+    phone: "08090123456",
+    address: "123 Aba Rd, Onitsha, Nigeria",
+  },
+  {
+    id: 10,
+    name: "Femi Ojo",
+    students: ["Olakunle Adeoye"],
+    email: "femi.ojo@yahoo.com",
+    phone: "08001234567",
+    address: "456 Marina St, Lagos Island, Nigeria",
+  },
+];
+
+export const subjectsData = [
+  {
+    id: 1,
+    name: "Math",
+    teachers: ["Adebayo Ogunleye", "Chinwe Nwosu"],
+  },
+  {
+    id: 2,
+    name: "English",
+    teachers: ["Ngozi Uche", "Tunde Adewale"],
+  },
+  {
+    id: 3,
+    name: "Physics",
+    teachers: ["Kunle Okonkwo", "Ijeoma Eze"],
+  },
+  {
+    id: 4,
+    name: "Chemistry",
+    teachers: ["Femi Adebanjo", "Chidinma Obiora"],
+  },
+  {
+    id: 5,
+    name: "Biology",
+    teachers: ["Funmi Akinyemi", "Bola Alade"],
+  },
+  {
+    id: 6,
+    name: "History",
+    teachers: ["Yemi Falade", "Ifeanyi Nduka"],
+  },
+  {
+    id: 7,
+    name: "Geography",
+    teachers: ["Amara Obi", "Seun Balogun"],
+  },
+  {
+    id: 8,
+    name: "Art",
+    teachers: ["Tope Onyekachi", "Nkechi Iwu"],
+  },
+  {
+    id: 9,
+    name: "Music",
+    teachers: ["Adeola Ajayi", "Efe Oladipo"],
+  },
+  {
+    id: 10,
+    name: "Literature",
+    teachers: ["Chiamaka Okechukwu", "Samuel Anjorin"],
+  },
+];
+
+export const classesData = [
+  {
+    id: 1,
+    name: "1A",
+    capacity: 20,
+    grade: 1,
+    supervisor: "Adekunle Ogunleye",
+  },
+  {
+    id: 2,
+    name: "2B",
+    capacity: 22,
+    grade: 2,
+    supervisor: "Chioma Okeke",
+  },
+  {
+    id: 3,
+    name: "3C",
+    capacity: 20,
+    grade: 3,
+    supervisor: "Tunde Alabi",
+  },
+  {
+    id: 4,
+    name: "4B",
+    capacity: 18,
+    grade: 4,
+    supervisor: "Ngozi Eze",
+  },
+  {
+    id: 5,
+    name: "5A",
+    capacity: 16,
+    grade: 5,
+    supervisor: "Funke Balogun",
+  },
+  {
+    id: 6,
+    name: "5B",
+    capacity: 20,
+    grade: 5,
+    supervisor: "Kunle Adebayo",
+  },
+  {
+    id: 7,
+    name: "7A",
+    capacity: 18,
+    grade: 7,
+    supervisor: "Bola Akinfenwa",
+  },
+  {
+    id: 8,
+    name: "6B",
+    capacity: 22,
+    grade: 6,
+    supervisor: "Ifeoma Nwachukwu",
+  },
+  {
+    id: 9,
+    name: "6C",
+    capacity: 18,
+    grade: 6,
+    supervisor: "Femi Ojo",
+  },
+  {
+    id: 10,
+    name: "6D",
+    capacity: 20,
+    grade: 6,
+    supervisor: "Amara Obi",
+  },
+];
+
+
+export const lessonsData = [
+  {
+    id: 1,
+    subject: "Math",
+    class: "1A",
+    teacher: "Chinedu Okafor",
+  },
+  {
+    id: 2,
+    subject: "English",
+    class: "2A",
+    teacher: "Amaka Eze",
+  },
+  {
+    id: 3,
+    subject: "Science",
+    class: "3A",
+    teacher: "Gbenga Ajayi",
+  },
+  {
+    id: 4,
+    subject: "Social Studies",
+    class: "1B",
+    teacher: "Ngozi Nwankwo",
+  },
+  {
+    id: 5,
+    subject: "Art",
+    class: "4A",
+    teacher: "Ireti Adebanjo",
+  },
+  {
+    id: 6,
+    subject: "Music",
+    class: "5A",
+    teacher: "Bola Akinyemi",
+  },
+  {
+    id: 7,
+    subject: "History",
+    class: "6A",
+    teacher: "Yakubu Suleiman",
+  },
+  {
+    id: 8,
+    subject: "Geography",
+    class: "6B",
+    teacher: "Fatima Abdullahi",
+  },
+  {
+    id: 9,
+    subject: "Physics",
+    class: "6C",
+    teacher: "Olumide Babalola",
+  },
+  {
+    id: 10,
+    subject: "Chemistry",
+    class: "4B",
+    teacher: "Temitope Owolabi",
+  },
+];
+
+
+export const examsData = [
+  {
+    id: 1,
+    subject: "Math",
+    class: "1A",
+    teacher: "Martha Morris",
+    date: "2025-01-01",
+  },
+  {
+    id: 2,
+    subject: "English",
+    class: "2A",
+    teacher: "Randall Garcia",
+    date: "2025-01-01",
+  },
+  {
+    id: 3,
+    subject: "Science",
+    class: "3A",
+    teacher: "Myrtie Scott",
+    date: "2025-01-01",
+  },
+  {
+    id: 4,
+    subject: "Social Studies",
+    class: "1B",
+    teacher: "Alvin Swanson",
+    date: "2025-01-01",
+  },
+  {
+    id: 5,
+    subject: "Art",
+    class: "4A",
+    teacher: "Mabelle Wallace",
+    date: "2025-01-01",
+  },
+  {
+    id: 6,
+    subject: "Music",
+    class: "5A",
+    teacher: "Dale Thompson",
+    date: "2025-01-01",
+  },
+  {
+    id: 7,
+    subject: "History",
+    class: "6A",
+    teacher: "Allie Conner",
+    date: "2025-01-01",
+  },
+  {
+    id: 8,
+    subject: "Geography",
+    class: "6B",
+    teacher: "Hunter Fuller",
+    date: "2025-01-01",
+  },
+  {
+    id: 9,
+    subject: "Physics",
+    class: "7A",
+    teacher: "Lois Lindsey",
+    date: "2025-01-01",
+  },
+  {
+    id: 10,
+    subject: "Chemistry",
+    class: "8A",
+    teacher: "Vera Soto",
+    date: "2025-01-01",
+  },
+];
+
+export const assignmentsData = [
+  {
+    id: 1,
+    subject: "Math",
+    class: "1A",
+    teacher: "Anthony Boone",
+    dueDate: "2025-01-01",
+  },
+  {
+    id: 2,
+    subject: "English",
+    class: "2A",
+    teacher: "Clifford Bowen",
+    dueDate: "2025-01-01",
+  },
+  {
+    id: 3,
+    subject: "Science",
+    class: "3A",
+    teacher: "Catherine Malone",
+    dueDate: "2025-01-01",
+  },
+  {
+    id: 4,
+    subject: "Social Studies",
+    class: "1B",
+    teacher: "Willie Medina",
+    dueDate: "2025-01-01",
+  },
+  {
+    id: 5,
+    subject: "Art",
+    class: "4A",
+    teacher: "Jose Ruiz",
+    dueDate: "2025-01-01",
+  },
+  {
+    id: 6,
+    subject: "Music",
+    class: "5A",
+    teacher: "Katharine Owens",
+    dueDate: "2025-01-01",
+  },
+  {
+    id: 7,
+    subject: "History",
+    class: "6A",
+    teacher: "Shawn Norman",
+    dueDate: "2025-01-01",
+  },
+  {
+    id: 8,
+    subject: "Geography",
+    class: "6B",
+    teacher: "Don Holloway",
+    dueDate: "2025-01-01",
+  },
+  {
+    id: 9,
+    subject: "Physics",
+    class: "7A",
+    teacher: "Franklin Gregory",
+    dueDate: "2025-01-01",
+  },
+  {
+    id: 10,
+    subject: "Chemistry",
+    class: "8A",
+    teacher: "Danny Nguyen",
+    dueDate: "2025-01-01",
+  },
+];
+
+export const resultsData = [
+  {
+    id: 1,
+    subject: "Math",
+    class: "1A",
+    teacher: "John Doe",
+    student: "John Doe",
+    date: "2025-01-01",
+    type: "exam",
+    score: 90,
+  },
+  {
+    id: 2,
+    subject: "English",
+    class: "2A",
+    teacher: "John Doe",
+    student: "John Doe",
+    date: "2025-01-01",
+    type: "exam",
+    score: 90,
+  },
+  {
+    id: 3,
+    subject: "Science",
+    class: "3A",
+    teacher: "John Doe",
+    student: "John Doe",
+    date: "2025-01-01",
+    type: "exam",
+    score: 90,
+  },
+  {
+    id: 4,
+    subject: "Social Studies",
+    class: "1B",
+    teacher: "John Doe",
+    student: "John Doe",
+    date: "2025-01-01",
+    type: "exam",
+    score: 90,
+  },
+  {
+    id: 5,
+    subject: "Art",
+    class: "4A",
+    teacher: "John Doe",
+    student: "John Doe",
+    date: "2025-01-01",
+    type: "exam",
+    score: 90,
+  },
+  {
+    id: 6,
+    subject: "Music",
+    class: "5A",
+    teacher: "John Doe",
+    student: "John Doe",
+    date: "2025-01-01",
+    type: "exam",
+    score: 90,
+  },
+  {
+    id: 7,
+    subject: "History",
+    class: "6A",
+    teacher: "John Doe",
+    student: "John Doe",
+    date: "2025-01-01",
+    type: "exam",
+    score: 90,
+  },
+  {
+    id: 8,
+    subject: "Geography",
+    class: "6B",
+    teacher: "John Doe",
+    student: "John Doe",
+    date: "2025-01-01",
+    type: "exam",
+    score: 90,
+  },
+  {
+    id: 9,
+    subject: "Physics",
+    class: "7A",
+    teacher: "John Doe",
+    student: "John Doe",
+    date: "2025-01-01",
+    type: "exam",
+    score: 90,
+  },
+  {
+    id: 10,
+    subject: "Chemistry",
+    class: "8A",
+    teacher: "John Doe",
+    student: "John Doe",
+    date: "2025-01-01",
+    type: "exam",
+    score: 90,
+  },
+];
+
+export const eventsData = [
+  {
+    id: 1,
+    title: "Lake Trip",
+    class: "1A",
+    date: "2025-01-01",
+    startTime: "10:00",
+    endTime: "11:00",
+  },
+  {
+    id: 2,
+    title: "Picnic",
+    class: "2A",
+    date: "2025-01-01",
+    startTime: "10:00",
+    endTime: "11:00",
+  },
+  {
+    id: 3,
+    title: "Beach Trip",
+    class: "3A",
+    date: "2025-01-01",
+    startTime: "10:00",
+    endTime: "11:00",
+  },
+  {
+    id: 4,
+    title: "Museum Trip",
+    class: "4A",
+    date: "2025-01-01",
+    startTime: "10:00",
+    endTime: "11:00",
+  },
+  {
+    id: 5,
+    title: "Music Concert",
+    class: "5A",
+    date: "2025-01-01",
+    startTime: "10:00",
+    endTime: "11:00",
+  },
+  {
+    id: 6,
+    title: "Magician Show",
+    class: "1B",
+    date: "2025-01-01",
+    startTime: "10:00",
+    endTime: "11:00",
+  },
+  {
+    id: 7,
+    title: "Lake Trip",
+    class: "2B",
+    date: "2025-01-01",
+    startTime: "10:00",
+    endTime: "11:00",
+  },
+  {
+    id: 8,
+    title: "Cycling Race",
+    class: "3B",
+    date: "2025-01-01",
+    startTime: "10:00",
+    endTime: "11:00",
+  },
+  {
+    id: 9,
+    title: "Art Exhibition",
+    class: "4B",
+    date: "2025-01-01",
+    startTime: "10:00",
+    endTime: "11:00",
+  },
+  {
+    id: 10,
+    title: "Sports Tournament",
+    class: "5B",
+    date: "2025-01-01",
+    startTime: "10:00",
+    endTime: "11:00",
+  },
+];
+
+export const announcementsData = [
+  {
+    id: 1,
+    title: "About 4A Math Test",
+    class: "4A",
+    date: "2025-01-01",
+  },
+  {
+    id: 2,
+    title: "About 3A Math Test",
+    class: "3A",
+    date: "2025-01-01",
+  },
+  {
+    id: 3,
+    title: "About 3B Math Test",
+    class: "3B",
+    date: "2025-01-01",
+  },
+  {
+    id: 4,
+    title: "About 6A Math Test",
+    class: "6A",
+    date: "2025-01-01",
+  },
+  {
+    id: 5,
+    title: "About 8C Math Test",
+    class: "8C",
+    date: "2025-01-01",
+  },
+  {
+    id: 6,
+    title: "About 2A Math Test",
+    class: "2A",
+    date: "2025-01-01",
+  },
+  {
+    id: 7,
+    title: "About 4C Math Test",
+    class: "4C",
+    date: "2025-01-01",
+  },
+  {
+    id: 8,
+    title: "About 4B Math Test",
+    class: "4B",
+    date: "2025-01-01",
+  },
+  {
+    id: 9,
+    title: "About 3C Math Test",
+    class: "3C",
+    date: "2025-01-01",
+  },
+  {
+    id: 10,
+    title: "About 1C Math Test",
+    class: "1C",
+    date: "2025-01-01",
+  },
+];
+
+
+// YOU SHOULD CHANGE THE DATES OF THE EVENTS TO THE CURRENT DATE TO SEE THE EVENTS ON THE CALENDAR
+export const calendarEvents = [
+  {
+    title: "Math",
+    allDay: false,
+    start: new Date(2024, 7, 12, 8, 0),
+    end: new Date(2024, 7, 12, 8, 45),
+  },
+  {
+    title: "English",
+    allDay: false,
+    start: new Date(2024, 7, 12, 9, 0),
+    end: new Date(2024, 7, 12, 9, 45),
+  },
+  {
+    title: "Biology",
+    allDay: false,
+    start: new Date(2024, 7, 12, 10, 0),
+    end: new Date(2024, 7, 12, 10, 45),
+  },
+  {
+    title: "Physics",
+    allDay: false,
+    start: new Date(2024, 7, 12, 11, 0),
+    end: new Date(2024, 7, 12, 11, 45),
+  },
+  {
+    title: "Chemistry",
+    allDay: false,
+    start: new Date(2024, 7, 12, 13, 0),
+    end: new Date(2024, 7, 12, 13, 45),
+  },
+  {
+    title: "History",
+    allDay: false,
+    start: new Date(2024, 7, 12, 14, 0),
+    end: new Date(2024, 7, 12, 14, 45),
+  },
+  {
+    title: "English",
+    allDay: false,
+    start: new Date(2024, 7, 13, 9, 0),
+    end: new Date(2024, 7, 13, 9, 45),
+  },
+  {
+    title: "Biology",
+    allDay: false,
+    start: new Date(2024, 7, 13, 10, 0),
+    end: new Date(2024, 7, 13, 10, 45),
+  },
+  {
+    title: "Physics",
+    allDay: false,
+    start: new Date(2024, 7, 13, 11, 0),
+    end: new Date(2024, 7, 13, 11, 45),
+  },
+
+  {
+    title: "History",
+    allDay: false,
+    start: new Date(2024, 7, 13, 14, 0),
+    end: new Date(2024, 7, 13, 14, 45),
+  },
+  {
+    title: "Math",
+    allDay: false,
+    start: new Date(2024, 7, 14, 8, 0),
+    end: new Date(2024, 7, 14, 8, 45),
+  },
+  {
+    title: "Biology",
+    allDay: false,
+    start: new Date(2024, 7, 14, 10, 0),
+    end: new Date(2024, 7, 14, 10, 45),
+  },
+
+  {
+    title: "Chemistry",
+    allDay: false,
+    start: new Date(2024, 7, 14, 13, 0),
+    end: new Date(2024, 7, 14, 13, 45),
+  },
+  {
+    title: "History",
+    allDay: false,
+    start: new Date(2024, 7, 14, 14, 0),
+    end: new Date(2024, 7, 13, 14, 45),
+  },
+  {
+    title: "English",
+    allDay: false,
+    start: new Date(2024, 7, 15, 9, 0),
+    end: new Date(2024, 7, 15, 9, 45),
+  },
+  {
+    title: "Biology",
+    allDay: false,
+    start: new Date(2024, 7, 15, 10, 0),
+    end: new Date(2024, 7, 15, 10, 45),
+  },
+  {
+    title: "Physics",
+    allDay: false,
+    start: new Date(2024, 7, 15, 11, 0),
+    end: new Date(2024, 7, 15, 11, 45),
+  },
+
+  {
+    title: "History",
+    allDay: false,
+    start: new Date(2024, 7, 15, 14, 0),
+    end: new Date(2024, 7, 15, 14, 45),
+  },
+  {
+    title: "Math",
+    allDay: false,
+    start: new Date(2024, 7, 16, 8, 0),
+    end: new Date(2024, 7, 16, 8, 45),
+  },
+  {
+    title: "English",
+    allDay: false,
+    start: new Date(2024, 7, 16, 9, 0),
+    end: new Date(2024, 7, 16, 9, 45),
+  },
+
+  {
+    title: "Physics",
+    allDay: false,
+    start: new Date(2024, 7, 16, 11, 0),
+    end: new Date(2024, 7, 16, 11, 45),
+  },
+  {
+    title: "Chemistry",
+    allDay: false,
+    start: new Date(2024, 7, 16, 13, 0),
+    end: new Date(2024, 7, 16, 13, 45),
+  },
+  {
+    title: "History",
+    allDay: false,
+    start: new Date(2024, 7, 16, 14, 0),
+    end: new Date(2024, 7, 16, 14, 45),
+  },
+];

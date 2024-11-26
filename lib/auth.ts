@@ -1,9 +1,5 @@
-// lib/auth.ts
-import {
-  signInWithPopup,
-  GoogleAuthProvider,
-  UserCredential,
-} from "firebase/auth";
+
+import { GoogleAuthProvider, signInWithPopup, UserCredential } from "firebase/auth";
 import { auth } from "./firebase";
 
 export const signInWithGoogle = async (): Promise<UserCredential> => {
@@ -11,7 +7,7 @@ export const signInWithGoogle = async (): Promise<UserCredential> => {
 
   try {
     const result: UserCredential = await signInWithPopup(auth, provider);
-    return result; // This will contain user info (e.g., displayName, email, etc.)
+    return result; 
   } catch (error) {
     console.error("Error during Google sign-in", error);
     throw new Error(error instanceof Error ? error.message : "Unknown error");

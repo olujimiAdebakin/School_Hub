@@ -841,7 +841,7 @@ export const resultsData = [
 export const eventsData = [
   {
     id: 1,
-    title: "Lake Trip",
+    title: "Ogun Lake Trip",
     class: "1A",
     date: "2025-01-01",
     startTime: "10:00",
@@ -849,7 +849,7 @@ export const eventsData = [
   },
   {
     id: 2,
-    title: "Picnic",
+    title: "Jollof Rice Picnic",
     class: "2A",
     date: "2025-01-01",
     startTime: "10:00",
@@ -857,7 +857,7 @@ export const eventsData = [
   },
   {
     id: 3,
-    title: "Beach Trip",
+    title: "Lagos Beach Trip",
     class: "3A",
     date: "2025-01-01",
     startTime: "10:00",
@@ -865,7 +865,7 @@ export const eventsData = [
   },
   {
     id: 4,
-    title: "Museum Trip",
+    title: "National Museum Trip",
     class: "4A",
     date: "2025-01-01",
     startTime: "10:00",
@@ -873,7 +873,7 @@ export const eventsData = [
   },
   {
     id: 5,
-    title: "Music Concert",
+    title: "Afrobeats Concert",
     class: "5A",
     date: "2025-01-01",
     startTime: "10:00",
@@ -881,7 +881,7 @@ export const eventsData = [
   },
   {
     id: 6,
-    title: "Magician Show",
+    title: "Nigerian Magician Show",
     class: "1B",
     date: "2025-01-01",
     startTime: "10:00",
@@ -889,7 +889,7 @@ export const eventsData = [
   },
   {
     id: 7,
-    title: "Lake Trip",
+    title: "River Niger Lake Trip",
     class: "2B",
     date: "2025-01-01",
     startTime: "10:00",
@@ -897,7 +897,7 @@ export const eventsData = [
   },
   {
     id: 8,
-    title: "Cycling Race",
+    title: "Nigerian Cycling Race",
     class: "3B",
     date: "2025-01-01",
     startTime: "10:00",
@@ -905,7 +905,7 @@ export const eventsData = [
   },
   {
     id: 9,
-    title: "Art Exhibition",
+    title: "Nigerian Art Exhibition",
     class: "4B",
     date: "2025-01-01",
     startTime: "10:00",
@@ -913,13 +913,14 @@ export const eventsData = [
   },
   {
     id: 10,
-    title: "Sports Tournament",
+    title: "Nigerian Sports Tournament",
     class: "5B",
     date: "2025-01-01",
     startTime: "10:00",
     endTime: "11:00",
   },
 ];
+
 
 export const announcementsData = [
   {
